@@ -2,26 +2,19 @@
 #include <time.h>
 #include <stdio.h>
 
-/**
- * Determine the sign of a number.
- *
- * @param n The number to determine the sign of.
- * @return A string indicating the sign of the number.
- */
-char *determine_sign(int n) {
-  if (n > 0) {
-    return "positive";
-  } else if (n == 0) {
-    return "zero";
-  } else {
-    return "negative";
-  }
-}
-
 int main() {
-  int n = rand() - RAND_MAX / 2;
+  int n = 0;
 
-  printf("The number %d is %s.\n", n, determine_sign(n));
+  srand(time(NULL));
+  n = rand() - RAND_MAX / 2;
+
+  if (n > 0) {
+    printf("%d is positive\n", n);
+  } else if (n == 0) {
+    printf("%d is zero\n", n);
+  } else {
+    printf("%d is negative\n", n);
+  }
 
   return 0;
-}}
+}
