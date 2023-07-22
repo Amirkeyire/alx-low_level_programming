@@ -1,1 +1,1 @@
-taticsd
+Static Library
